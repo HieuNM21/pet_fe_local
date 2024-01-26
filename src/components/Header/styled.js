@@ -3,6 +3,6 @@ import AppBar from "@mui/material/AppBar";
 
 export const DsAppBar = styled(AppBar)`
   background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
