@@ -12,6 +12,7 @@ import {
   IconButton,
   Box,
   Grid,
+  Container
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -28,11 +29,11 @@ const Header = () => {
   };
 
   return (
-    <DsAppBar style={{ backgroundColor: "#ffffff" }}>
-      <Toolbar>
-        <Grid container alignItems="center" justifyContent="space-around">
+    <DsAppBar position="fixed" style={{ backgroundColor: "#ffffff" }}>
+      <Container>
+        <Grid container alignItems="center" justifyContent="space-between">
           {/* Logo */}
-          <Grid item xs={8} sm={4}>
+          <Grid item xl={4}>
             <Typography variant="h6">
               <Link to="/">
                 <img
@@ -45,11 +46,9 @@ const Header = () => {
           </Grid>
           {/* Navigation Buttons */}
           <Hidden smDown>
-            <Grid item xs={12} sm={6}>
+            <Grid item xl={6}>
               <Box
                 sx={{
-                  display: "flex",
-                  justifyContent: "end",
                   color: "#000",
                   "& > button": {
                     fontSize: "16px",
@@ -92,7 +91,7 @@ const Header = () => {
             </Grid>
           </Hidden>
         </Grid>
-      </Toolbar>
+      </Container>
     </DsAppBar>
   );
 };
