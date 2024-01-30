@@ -3,23 +3,16 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import "./css/Service.css";
 
 const Service = () => {
   return (
-    <Container sx={{ paddingTop: "15%" }}>
+    <Container sx={{ paddingTop: "15%", paddingBottom: "100px" }}>
       <Grid container justifyContent="center">
-        <Grid item lg={5} md={6}>
-          <Box sx={{ textAlign: "center", marginBottom: "50px" }}>
-            <Typography
-              variant="h4"
-              sx={{
-                fontFamily: "'Poppins', sans-serif !important",
-                fontWeight: "700",
-              }}
-            >
-              Services for every dog
-            </Typography>
-            <Typography sx={{ color: "#909092" }}>
+        <Grid item lg={7} md={10}>
+          <Box className="section_title">
+            <Typography variant="h3">Services for every dog</Typography>
+            <Typography variant="h4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna.
             </Typography>
@@ -27,61 +20,55 @@ const Service = () => {
         </Grid>
       </Grid>
       <Grid container justifyContent="center" spacing={3}>
-        <Grid item md={3} sx={{border: "1px solid #ffc5c2", borderRadius: "10px", padding: "10px", margin: "10px"}}>
-          <Box className="single_service">
-            <Box className="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-              <Box className="service_icon">
-                <img
-                  src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_1.png.webp"
-                  alt=""
-                />
-              </Box>
-            </Box>
-            <Box className="service_content text-center">
-              <Typography variant="h4">Pet Boarding</Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
-              </Typography>
+        <Grid className="single_service" item md={3}>
+          <Box className="service_thumb">
+            <Box className="service_icon">
+              <img
+                src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_1.png.webp"
+                alt=""
+              />
             </Box>
           </Box>
-        </Grid>
-        <Grid item md={3} sx={{border: "1px solid #ffc5c2", borderRadius: "10px", padding: "10px", margin: "10px"}}>
-          <Box className="single_service active">
-            <Box className="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-              <Box className="service_icon">
-                <img
-                  src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_2.png.webp"
-                  alt=""
-                />
-              </Box>
-            </Box>
-            <Box className="service_content text-center">
-              <Typography variant="h4">Healthy Meals</Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
-              </Typography>
-            </Box>
+          <Box className="service_content">
+            <Typography variant="h3">Pet Boarding</Typography>
+            <Typography variant="h4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut
+            </Typography>
           </Box>
         </Grid>
-        <Grid item md={3} sx={{border: "1px solid #ffc5c2", borderRadius: "10px", padding: "10px", margin: "10px"}}>
-          <Box className="single_service">
-            <Box className="service_thumb service_icon_bg_1 d-flex align-items-center justify-content-center">
-              <Box className="service_icon">
-                <img
-                  src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_3.png.webp"
-                  alt=""
-                />
-              </Box>
+        <Grid className="single_service" item md={3}>
+          <Box className="service_thumb">
+            <Box className="service_icon">
+              <img
+                src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_2.png.webp"
+                alt=""
+              />
             </Box>
-            <Box className="service_content text-center">
-              <Typography variant="h4">Pet Spa</Typography>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut
-              </Typography>
+          </Box>
+          <Box className="service_content">
+            <Typography variant="h3">Healthy Meals</Typography>
+            <Typography variant="h4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid className="single_service" item md={3}>
+          <Box className="service_thumb">
+            <Box className="service_icon">
+              <img
+                src="https://preview.colorlib.com/theme/anipat/img/service/service_icon_3.png.webp"
+                alt=""
+              />
             </Box>
+          </Box>
+          <Box className="service_content">
+            <Typography variant="h3">Pet Spa</Typography>
+            <Typography variant="h4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut
+            </Typography>
           </Box>
         </Grid>
       </Grid>

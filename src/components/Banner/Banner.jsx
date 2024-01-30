@@ -1,4 +1,4 @@
-import { Grid, Typography, Box, Container, Button } from "@mui/material";
+import { Grid, Typography, Container, Button } from "@mui/material";
 
 const Banner = () => {
   return (
@@ -34,6 +34,8 @@ const Banner = () => {
               color: "#ff3500",
               borderRadius: "30px",
               padding: "17px 50px",
+              textTransform: "none",
+              fontSize: "1rem"
             }}
           >
             Contact us

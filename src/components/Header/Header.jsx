@@ -2,7 +2,7 @@ import React from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Hidden from "@mui/material/Hidden";
 import { Link } from "react-router-dom";
-import { DsAppBar } from "./styled";
+import { DsAppBar, DsButton } from "./styled";
 import {
   Toolbar,
   Typography,
@@ -56,12 +56,12 @@ const Header = () => {
                   },
                 }}
               >
-                <Button color="inherit">Home</Button>
-                <Button color="inherit">About</Button>
-                <Button color="inherit" onClick={handleClick}>
+                <DsButton color="inherit">Home</DsButton>
+                <DsButton color="inherit">About</DsButton>
+                <DsButton color="inherit" onClick={handleClick}>
                   Blog
                   <ArrowDropDownIcon />
-                </Button>
+                </DsButton>
                 <Menu
                   id="blog-menu"
                   anchorEl={anchorEl}
@@ -76,9 +76,9 @@ const Header = () => {
                   <MenuItem onClick={handleClose}>Blog 2</MenuItem>
                   <MenuItem onClick={handleClose}>Blog 3</MenuItem>
                 </Menu>
-                <Button color="inherit">Pages</Button>
-                <Button color="inherit">Services</Button>
-                <Button color="inherit">Contact</Button>
+                <DsButton color="inherit">Pages</DsButton>
+                <DsButton color="inherit">Services</DsButton>
+                <DsButton color="inherit">Contact</DsButton>
               </Box>
             </Grid>
           </Hidden>
