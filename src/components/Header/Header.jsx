@@ -12,9 +12,12 @@ import {
   IconButton,
   Box,
   Grid,
-  Container
+  Container,
+  Slide,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Fade from "@mui/material/Fade";
+import Collapse from "@mui/material/Collapse";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,6 +29,12 @@ const Header = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const slideProps = {
+    mountOnEnter: true,
+    unmountOnExit: true,
+    timeout: { enter: 225, exit: 195 },
   };
 
   return (
@@ -70,7 +79,8 @@ const Header = () => {
                   MenuListProps={{
                     "aria-labelledby": "blog-button",
                   }}
-                  //   TransitionComponent={Grow}
+                  TransitionComponent={Fade}
+                  TransitionProps={{ timeout: 300 }}
                 >
                   <MenuItem onClick={handleClose}>Blog 1</MenuItem>
                   <MenuItem onClick={handleClose}>Blog 2</MenuItem>

@@ -4,6 +4,7 @@ import Banner from "./components/Banner/Banner";
 import Service from "./components/Services/Service";
 import PetCare from "./components/Services/PetCare";
 import AdaptArea from "./components/Services/AdaptArea";
+import TestimonialArea from "./components/Services/TestimonialArea";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -15,6 +16,7 @@ function App() {
       <Service />
       <PetCare/>
       <AdaptArea/>
+      <TestimonialArea/>
       <Footer/>
     </Router>
   );

@@ -11,15 +11,11 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { styled } from "@mui/material/styles";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import GoogleIcon from '@mui/icons-material/Google';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import "./Footer.css";
-
-const DsListItemText = styled(ListItemText)`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 40px;
-  font-family: "Poppins", sans-serif !important;
-  color: #7a7a7a;
-`;
 
 const Footer = () => {
   return (
@@ -33,16 +29,30 @@ const Footer = () => {
                   Contact Us
                 </Typography>
                 <List className="address_line">
-                  <ListItem sx={{paddingLeft: "0"}}>
-                    <DsListItemText primary="+555 0000 565" />
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemText
+                      className="txtAddress"
+                      primary="+555 0000 565"
+                    />
                   </ListItem>
-                  <ListItem sx={{paddingLeft: "0"}}>
-                    <ListItemButton component="" href="#" sx={{paddingLeft: "0"}}>
-                      <DsListItemText primary="Demomail@gmail.Com" />
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton
+                      className="btnAddress"
+                      component=""
+                      href="#"
+                      sx={{ paddingLeft: "0" }}
+                    >
+                      <ListItemText
+                        className="txtAddress"
+                        primary="nmhieu21@gmail.Com"
+                      />
                     </ListItemButton>
                   </ListItem>
-                  <ListItem sx={{paddingLeft: "0"}}>
-                    <DsListItemText primary="700, Green Lane, New York, USA" />
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemText
+                      className="txtAddress"
+                      primary="FPT University"
+                    />
                   </ListItem>
                 </List>
               </Box>
@@ -52,23 +62,48 @@ const Footer = () => {
                 <Typography variant="h3" className="footer_title">
                   Our Services
                 </Typography>
-                <ul className="links">
-                  <li>
-                    <Link href="#">Pet Insurance</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Pet surgeries</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Pet Adoption</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Dog Insurance</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Dog Insurance</Link>
-                  </li>
-                </ul>
+                <List className="links">
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Pet Insurance"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Pet surgeries"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Pet Adoption"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Dog Insurance"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Dog Insurance"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
               </Box>
             </Grid>
             <Grid item xl={3} md={3} lg={3}>
@@ -76,59 +111,89 @@ const Footer = () => {
                 <Typography variant="h3" className="footer_title">
                   Quick Link
                 </Typography>
-                <ul className="links">
-                  <li>
-                    <Link href="#">About Us</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Privacy Policy</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Terms of Service</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Login info</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Knowledge Base</Link>
-                  </li>
-                </ul>
+                <List className="links">
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText className="txtLinks" primary="About Us" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Privacy Policy"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Terms of Service"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText className="txtLinks" primary="Login info" />
+                    </ListItemButton>
+                  </ListItem>
+                  <ListItem sx={{ paddingLeft: "0" }}>
+                    <ListItemButton className="btnLinks" component="" href="#">
+                      <ListItemText
+                        className="txtLinks"
+                        primary="Knowledge Base"
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                </List>
               </Box>
             </Grid>
             <Grid item xl={3} md={3} lg={3}>
               <Box className="footer_widget">
-                <div className="footer_logo">
+                <Box className="footer_logo" sx={{ marginBottom: "35px" }}>
                   <Link href="#">
-                    <img src="img/logo.png" alt="" />
+                    <img
+                      src="https://preview.colorlib.com/theme/anipat/img/logo.png.webp"
+                      alt=""
+                    />
                   </Link>
-                </div>
+                </Box>
                 <Typography className="address_text">
                   239 E 5th St, New York NY 10003, USA
                 </Typography>
-                <div className="socail_links">
-                  <ul>
-                    <li>
-                      <Link href="#">
-                        <i className="ti-facebook"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#">
-                        <i className="ti-pinterest"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#">
-                        <i className="fa fa-google-plus"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="#">
-                        <i className="fa fa-linkedin"></i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <Box className="social_links">
+                  <List spacing={2} sx={{display: "flex"}}>
+                    <ListItem disablePadding>
+                      <ListItemButton sx={{paddingLeft: "0"}}>
+                        <Link href="#">
+                          <FacebookIcon sx={{color: "#7a7a7a"}}/>
+                        </Link>
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                      <ListItemButton>
+                        <Link href="#">
+                          <PinterestIcon sx={{color: "#7a7a7a"}}/>
+                        </Link>
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                      <ListItemButton>
+                        <Link href="#">
+                          <GoogleIcon sx={{color: "#7a7a7a"}}/>
+                        </Link>
+                      </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                      <ListItemButton>
+                        <Link href="#">
+                          <LinkedInIcon sx={{color: "#7a7a7a"}}/>
+                        </Link>
+                      </ListItemButton>
+                    </ListItem>
+                  </List>
+                </Box>
               </Box>
             </Grid>
           </Grid>

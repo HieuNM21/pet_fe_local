@@ -1,4 +1,9 @@
-import { Grid, Typography, Container, Button } from "@mui/material";
+import { Grid, Typography, Container, Button, Box } from "@mui/material";
+import styled from "styled-components";
+
+const DsButton = styled(Button)`
+  text-transform: none !important;
+`;
 
 const Banner = () => {
   return (
@@ -19,11 +24,11 @@ const Banner = () => {
         <Grid item xs={12} md={4} sx={{ color: "#fff" }}>
           <Typography
             variant="h3"
-            sx={{ lineHeight: "1.3", fontWeight: "lighter" }}
+            sx={{ lineHeight: "1.3", fontWeight: "lighter", fontFamily: "'Poppins', sans-serif", fontSize: "4rem" }}
           >
             We Care <br /> <span style={{ fontWeight: "800" }}>Your Pets</span>
           </Typography>
-          <Typography sx={{ marginTop: "20px", marginBottom: "40px" }}>
+          <Typography sx={{ marginTop: "20px", marginBottom: "40px", fontFamily: "'Poppins', sans-serif" }}>
             Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed
             do eiusmod.
           </Typography>
@@ -42,6 +47,9 @@ const Banner = () => {
           </Button>
         </Grid>
       </Container>
+      <Box sx={{position: "absolute", zIndex: "1", right: "0", bottom: "-15%"}}>
+          <img src="https://preview.colorlib.com/theme/anipat/img/banner/dog.png.webp" alt="" style={{maxWidth: "80%"}}/>
+      </Box>
     </Grid>
   );
 };
