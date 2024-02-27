@@ -14,13 +14,14 @@ import {
   IconButton,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import "./ProductDetail.css";
 
 const ProductDetail = () => {
   return (
     <Container>
       <Box className="content-details">
         <Grid container>
-          <Grid item xl={4} lg={4} sx={{backgroundColor: "#FF0000"}}>
+          <Grid item xl={4} lg={4} sx={{ backgroundColor: "#FF0000" }}>
             <Box>
               {/* <img
                 className="img_zoom"
@@ -29,48 +30,31 @@ const ProductDetail = () => {
               /> */}
             </Box>
           </Grid>
-          <Grid item xl={7} lg={7} className="details-infor">
+          <Grid item xl={8} lg={8} className="details-infor">
             <Typography variant="h1" className="product-title">
               Glorious Eau
             </Typography>
-            <Box className="stars-rating">
+            {/* <Box className="stars-rating">
               <Box className="star-rating">
                 <span className="star-5"></span>
               </Box>
               <Typography variant="body2" className="count-star">
                 (7)
               </Typography>
-            </Box>
+            </Box> */}
             <Typography variant="body2" className="availability">
-              availability:
-              <Link href="#">in Stock</Link>
+              Availability:
+              <Link href="#"> In Stock</Link>
             </Typography>
             <Typography variant="body1" className="price">
               <span>$45</span>
             </Typography>
             <Box className="product-details-description">
               <Typography variant="body2">
-                <List>
-                  <ListItem>Vestibulum tortor quam</ListItem>
-                  <ListItem>Imported</ListItem>
-                  <ListItem>Art.No. 06-7680</ListItem>
-                </List>
+                Thức ăn cho chó Ganador Adult Salmon & Rice là thực phẩm dành
+                cho chó trưởng thành với công thức chế biến được nghiên cứu bởi
+                các chuyên gia.
               </Typography>
-            </Box>
-            <Box className="variations">
-              <Typography variant="body2" className="size-text text-attribute">
-                Size:
-              </Typography>
-              <FormControl variant="standard" className="list-item">
-                <Select labelId="size-label" id="size" value="m" label="Size">
-                  <MenuItem value="xs">XS</MenuItem>
-                  <MenuItem value="s">S</MenuItem>
-                  <MenuItem value="m">M</MenuItem>
-                  <MenuItem value="l">L</MenuItem>
-                  <MenuItem value="xl">XL</MenuItem>
-                  <MenuItem value="xxl">XXL</MenuItem>
-                </Select>
-              </FormControl>
             </Box>
             <Box className="quantity-add-to-cart">
               <Box className="control">
